@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SelectPersonVC.swift
 //  StarWarsTrivia
 //
 //  Created by Joshua Madrigal on 9/26/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SelectPersonVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
