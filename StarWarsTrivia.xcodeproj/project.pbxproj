@@ -15,6 +15,8 @@
 		555AF5D2215BE951003B4D11 /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 555AF5CF215BE951003B4D11 /* Starjhol.ttf */; };
 		555AF5D3215BE951003B4D11 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 555AF5D0215BE951003B4D11 /* Starjout.ttf */; };
 		555AF5D4215BE951003B4D11 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 555AF5D1215BE951003B4D11 /* Starjedi.ttf */; };
+		555AF5D6215BF01E003B4D11 /* BlackBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5D5215BF01E003B4D11 /* BlackBgView.swift */; };
+		555AF5D9215BF096003B4D11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5D8215BF096003B4D11 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		555AF5CF215BE951003B4D11 /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
 		555AF5D0215BE951003B4D11 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 		555AF5D1215BE951003B4D11 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		555AF5D5215BF01E003B4D11 /* BlackBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBgView.swift; sourceTree = "<group>"; };
+		555AF5D8215BF096003B4D11 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				555AF5CB215BE90F003B4D11 /* View */,
 				555AF5CC215BE915003B4D11 /* Controller */,
 				555AF5B8215BE8EC003B4D11 /* AppDelegate.swift */,
+				555AF5D7215BF084003B4D11 /* Utils */,
 				555AF5CD215BE93E003B4D11 /* Resources */,
 				555AF5BC215BE8EC003B4D11 /* Main.storyboard */,
 				555AF5BF215BE8F0003B4D11 /* Assets.xcassets */,
@@ -83,6 +88,7 @@
 		555AF5CB215BE90F003B4D11 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				555AF5D5215BF01E003B4D11 /* BlackBgView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +117,14 @@
 				555AF5D0215BE951003B4D11 /* Starjout.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		555AF5D7215BF084003B4D11 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				555AF5D8215BF096003B4D11 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +203,8 @@
 			files = (
 				555AF5BB215BE8EC003B4D11 /* SelectPersonVC.swift in Sources */,
 				555AF5B9215BE8EC003B4D11 /* AppDelegate.swift in Sources */,
+				555AF5D6215BF01E003B4D11 /* BlackBgView.swift in Sources */,
+				555AF5D9215BF096003B4D11 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

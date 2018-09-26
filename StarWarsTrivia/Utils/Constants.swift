@@ -1,5 +1,5 @@
 //
-//  SelectPersonVC.swift
+//  Constants.swift
 //  StarWarsTrivia
 //
 //  Created by Joshua Madrigal on 9/26/18.
@@ -8,13 +8,4 @@
 
 import UIKit
 
-class SelectPersonVC: UIViewController {
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-
-}
-
+let BLACK_BG = UIColor.black.withAlphaComponent(0.6).cgColor
