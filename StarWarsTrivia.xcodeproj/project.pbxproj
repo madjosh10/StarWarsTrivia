@@ -17,6 +17,7 @@
 		555AF5D4215BE951003B4D11 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 555AF5D1215BE951003B4D11 /* Starjedi.ttf */; };
 		555AF5D6215BF01E003B4D11 /* BlackBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5D5215BF01E003B4D11 /* BlackBgView.swift */; };
 		555AF5D9215BF096003B4D11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5D8215BF096003B4D11 /* Constants.swift */; };
+		555AF5DE215EA319003B4D11 /* PersonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5DD215EA319003B4D11 /* PersonAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		555AF5D1215BE951003B4D11 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
 		555AF5D5215BF01E003B4D11 /* BlackBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBgView.swift; sourceTree = "<group>"; };
 		555AF5D8215BF096003B4D11 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		555AF5DD215EA319003B4D11 /* PersonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				555AF5CB215BE90F003B4D11 /* View */,
 				555AF5CC215BE915003B4D11 /* Controller */,
 				555AF5B8215BE8EC003B4D11 /* AppDelegate.swift */,
+				555AF5DC215EA2FC003B4D11 /* Services */,
 				555AF5D7215BF084003B4D11 /* Utils */,
 				555AF5CD215BE93E003B4D11 /* Resources */,
 				555AF5BC215BE8EC003B4D11 /* Main.storyboard */,
@@ -125,6 +128,14 @@
 				555AF5D8215BF096003B4D11 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		555AF5DC215EA2FC003B4D11 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				555AF5DD215EA319003B4D11 /* PersonAPI.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 				555AF5BB215BE8EC003B4D11 /* SelectPersonVC.swift in Sources */,
 				555AF5B9215BE8EC003B4D11 /* AppDelegate.swift in Sources */,
 				555AF5D6215BF01E003B4D11 /* BlackBgView.swift in Sources */,
+				555AF5DE215EA319003B4D11 /* PersonAPI.swift in Sources */,
 				555AF5D9215BF096003B4D11 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
