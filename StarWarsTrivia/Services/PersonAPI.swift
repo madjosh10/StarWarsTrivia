@@ -26,7 +26,9 @@ class PersonAPI {
             do {
                 let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
                 guard let json = jsonAny as? [String: Any] else { return }
-                print(json)
+                let person = self.parsePersonManual(json: json)
+                
+                
             } catch {
                 debugPrint(error.localizedDescription)
             }
@@ -38,6 +40,22 @@ class PersonAPI {
         task.resume()
         
     } // end getRandomPersonURLSession func
+    
+    private func parsePersonManual(json: [String: Any]) -> Person {
+        let name = json["name"] as? String ?? "No Name"
+        let height = json["height"] as? String ?? "No Height"
+        let mass = json["mass"] as? String ?? "No mass"
+        let hair = json["hair_color"] as? String ?? "No hair"
+        let birthYear = json["birth_year"] as? String ?? "No year"
+        let gender = json["gender"] as? String ?? "No gender"
+        let homeWorldUrl = json["homeworld"] as? String ?? "no world"
+        let filmUrls = json["films"] as? [String] ?? [String]()
+        let vehicleUrls = json["vehicles"] as? [String] ?? [String]()
+        let starshipUrls = json["starships"] as? [String] ?? [String]()
+        
+        return Person(name: name, height: height, mass: mass, hair: hair, birthYear: birthYear, gender: gender, homeWorldUrl: homeWorldUrl, fileUrls: filmUrls, vehicleUrls: vehicleUrls, starshipUrls: starshipUrls)
+        
+    } // end parsePersonManual func
     
     
 } // end PersonAPI class
