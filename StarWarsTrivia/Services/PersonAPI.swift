@@ -10,14 +10,14 @@ import Foundation
 
 class PersonAPI {
     
-    
-    func getRandomPersonURLSession() {
+    func getRandomPersonURLSession(completion: @escaping PersonResponseCompletion) {
         
         guard let url = URL(string: PERSON_URL) else { return }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
                 debugPrint(error.debugDescription)
+                completion(nil)
                 return
             }
             
@@ -27,7 +27,7 @@ class PersonAPI {
                 let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
                 guard let json = jsonAny as? [String: Any] else { return }
                 let person = self.parsePersonManual(json: json)
-                
+                completion(person)
                 
             } catch {
                 debugPrint(error.localizedDescription)
