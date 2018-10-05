@@ -7,40 +7,68 @@
 //
 
 import Foundation
+import Alamofire
 
 class PersonAPI {
     
-    func getRandomPersonURLSession(id: Int,completion: @escaping PersonResponseCompletion) {
+    
+    //: - Web Request with Alamofire
+    func getRandomPersonAlamo(id: Int,completion: @escaping PersonResponseCompletion) {
         
         guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard error == nil else {
-                debugPrint(error.debugDescription)
-                completion(nil)
-                return
-            }
-            
-            guard let data = data else { return }
-            
-            do {
-                let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
-                guard let json = jsonAny as? [String: Any] else { return }
-                let person = self.parsePersonManual(json: json)
-                DispatchQueue.main.async {
-                    completion(person)
-                }
-            } catch {
+        Alamofire.request(url).responseJSON { (response) in
+            if let error = response.result.error {
                 debugPrint(error.localizedDescription)
+                    completion(nil)
+                    return
             }
             
-//            print("Data = \(data)")
-//            print("Response = \(response)")
+            guard let json = response.result.value as? [String: Any] else {
+                return completion(nil)}
+                let person = self.parsePersonManual(json: json)
+                completion(person)
+            
+            
             
         }
-        task.resume()
         
-    } // end getRandomPersonURLSession func
+    } // end getRandomPersonAlamo func
+    
+    
+    
+    //: - Web Request with URL Session
+//    func getRandomPersonURLSession(id: Int,completion: @escaping PersonResponseCompletion) {
+//
+//        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+//
+//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            guard error == nil else {
+//                debugPrint(error.debugDescription)
+//                completion(nil)
+//                return
+//            }
+//
+//            guard let data = data else { return }
+//
+//            do {
+//                let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
+//                guard let json = jsonAny as? [String: Any] else { return }
+//                let person = self.parsePersonManual(json: json)
+//                DispatchQueue.main.async {
+//                    completion(person)
+//                }
+//            } catch {
+//                debugPrint(error.localizedDescription)
+//            }
+//
+////            print("Data = \(data)")
+////            print("Response = \(response)")
+//
+//        }
+//        task.resume()
+//
+//    } // end getRandomPersonURLSession func
     
     private func parsePersonManual(json: [String: Any]) -> Person {
         let name = json["name"] as? String ?? "No Name"
