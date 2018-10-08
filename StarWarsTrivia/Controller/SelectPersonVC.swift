@@ -10,12 +10,18 @@ import UIKit
 
 class SelectPersonVC: UIViewController {
 
+    // outlets for person information
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var heightLbl: UILabel!
     @IBOutlet weak var massLbl: UILabel!
     @IBOutlet weak var hairLbl: UILabel!
     @IBOutlet weak var birthYearLbl: UILabel!
     @IBOutlet weak var genderLbl: UILabel!
+    // outlet for 4 buttons
+    @IBOutlet weak var filmsBtn: UIButton!
+    @IBOutlet weak var starshipsBtn: UIButton!
+    @IBOutlet weak var vehiclesBtn: UIButton!
+    @IBOutlet weak var homeWorldBtn: UIButton!
     
     var personAPI = PersonAPI()
     
@@ -28,17 +34,31 @@ class SelectPersonVC: UIViewController {
         let random = Int.random(in: 1 ... 87)
         personAPI.getRandomPersonAlamo(id: random) { (person) in
             if let person = person {
-                self.nameLbl.text = person.name
-                self.heightLbl.text = person.height
-                self.massLbl.text = person.mass
-                self.hairLbl.text = person.hair
-                self.birthYearLbl.text = person.birthYear
-                self.genderLbl.text = person.gender
+                self.setUpView(person: person)
             }
         }
+        
     }
     
+    func setUpView(person: Person) {
+        nameLbl.text = person.name
+        heightLbl.text = person.height
+        massLbl.text = person.mass
+        hairLbl.text = person.hair
+        birthYearLbl.text = person.birthYear
+        genderLbl.text = person.gender
+        
+        homeWorldBtn.isEnabled = !person.homeWorldUrl.isEmpty
+        vehiclesBtn.isEnabled = !person.vehicleUrls.isEmpty
+        starshipsBtn.isEnabled = !person.starshipUrls.isEmpty
+        filmsBtn.isEnabled = !person.filmUrls.isEmpty
+        
+        
+    }
+    
+    
     @IBAction func homeWorldClicked(_ sender: Any) {
+        
     }
     
     @IBAction func vehiclesClicked(_ sender: Any) {

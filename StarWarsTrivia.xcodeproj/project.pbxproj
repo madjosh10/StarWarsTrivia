@@ -19,6 +19,7 @@
 		555AF5D6215BF01E003B4D11 /* BlackBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5D5215BF01E003B4D11 /* BlackBgView.swift */; };
 		555AF5D9215BF096003B4D11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5D8215BF096003B4D11 /* Constants.swift */; };
 		555AF5DE215EA319003B4D11 /* PersonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5DD215EA319003B4D11 /* PersonAPI.swift */; };
+		5576A2DB216C0DD8009DF3AE /* FadeEnabledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5576A2DA216C0DD7009DF3AE /* FadeEnabledButton.swift */; };
 		55F84CBA215EAA140019589A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F84CB9215EAA140019589A /* Person.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		555AF5D5215BF01E003B4D11 /* BlackBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBgView.swift; sourceTree = "<group>"; };
 		555AF5D8215BF096003B4D11 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		555AF5DD215EA319003B4D11 /* PersonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAPI.swift; sourceTree = "<group>"; };
+		5576A2DA216C0DD7009DF3AE /* FadeEnabledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeEnabledButton.swift; sourceTree = "<group>"; };
 		55F84CB9215EAA140019589A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		8BE8A295C1C0D26E70C2B551 /* Pods-StarWarsTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsTrivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsTrivia/Pods-StarWarsTrivia.debug.xcconfig"; sourceTree = "<group>"; };
 		EB53423B30151CE8FEF948A0 /* Pods-StarWarsTrivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsTrivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsTrivia/Pods-StarWarsTrivia.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				555AF5D5215BF01E003B4D11 /* BlackBgView.swift */,
+				5576A2DA216C0DD7009DF3AE /* FadeEnabledButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F84CBA215EAA140019589A /* Person.swift in Sources */,
+				5576A2DB216C0DD8009DF3AE /* FadeEnabledButton.swift in Sources */,
 				555AF5BB215BE8EC003B4D11 /* SelectPersonVC.swift in Sources */,
 				555AF5B9215BE8EC003B4D11 /* AppDelegate.swift in Sources */,
 				555AF5D6215BF01E003B4D11 /* BlackBgView.swift in Sources */,

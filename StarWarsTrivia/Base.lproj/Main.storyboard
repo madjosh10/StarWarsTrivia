@@ -192,7 +192,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-9T-Kd5">
                                         <rect key="frame" x="20" y="20" width="295" height="35"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox3-LA-tff" userLabel="Homeworld">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox3-LA-tff" userLabel="Homeworld" customClass="FadeEnabledButton" customModule="StarWarsTrivia" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="2le-0z-vFU"/>
@@ -203,7 +203,7 @@
                                                     <action selector="homeWorldClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05N-TN-BdO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqB-Jv-x4R" userLabel="Vehicles">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqB-Jv-x4R" userLabel="Vehicles" customClass="FadeEnabledButton" customModule="StarWarsTrivia" customModuleProvider="target">
                                                 <rect key="frame" x="86.666666666666671" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="ATB-yk-UMk"/>
@@ -214,7 +214,7 @@
                                                     <action selector="vehiclesClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lZI-BG-swy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAY-Wb-Wbu" userLabel="Starships">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAY-Wb-Wbu" userLabel="Starships" customClass="FadeEnabledButton" customModule="StarWarsTrivia" customModuleProvider="target">
                                                 <rect key="frame" x="173.33333333333334" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="m9Y-F1-V8N"/>
@@ -225,7 +225,7 @@
                                                     <action selector="starshipsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XvW-gk-v3m"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laC-cl-And" userLabel="Films">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laC-cl-And" userLabel="Films" customClass="FadeEnabledButton" customModule="StarWarsTrivia" customModuleProvider="target">
                                                 <rect key="frame" x="260" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="9Bx-wE-OXz"/>
@@ -271,11 +271,15 @@
                     <navigationItem key="navigationItem" id="eMQ-zu-px7"/>
                     <connections>
                         <outlet property="birthYearLbl" destination="Eiu-oa-TOV" id="Bud-Ws-cQl"/>
+                        <outlet property="filmsBtn" destination="laC-cl-And" id="pXm-GN-2Qb"/>
                         <outlet property="genderLbl" destination="6V9-4s-DDj" id="jZI-yA-Tv0"/>
                         <outlet property="hairLbl" destination="i7Y-V9-8RF" id="QAd-95-QdX"/>
                         <outlet property="heightLbl" destination="SvL-FH-9LR" id="f09-yX-EFj"/>
+                        <outlet property="homeWorldBtn" destination="ox3-LA-tff" id="GT6-3h-XQx"/>
                         <outlet property="massLbl" destination="Erx-4k-tUU" id="TlX-cz-3Zm"/>
                         <outlet property="nameLbl" destination="qCz-qa-4Bh" id="E86-U0-X6N"/>
+                        <outlet property="starshipsBtn" destination="VAY-Wb-Wbu" id="d9B-F1-hxW"/>
+                        <outlet property="vehiclesBtn" destination="TqB-Jv-x4R" id="eNg-8G-vES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
