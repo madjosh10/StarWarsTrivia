@@ -38,6 +38,16 @@ class SelectPersonVC: UIViewController {
         }
     }
     
+    @IBAction func homeWorldClicked(_ sender: Any) {
+    }
     
+    @IBAction func vehiclesClicked(_ sender: Any) {
+    }
+    
+    @IBAction func starshipsClicked(_ sender: Any) {
+    }
+    
+    @IBAction func filmsClicked(_ sender: Any) {
+    }
 }
 

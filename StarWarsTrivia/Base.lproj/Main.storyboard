@@ -186,14 +186,78 @@
                                     <action selector="randomClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLr-eg-RnB"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Qr-BR-Ej5" customClass="BlackBgView" customModule="StarWarsTrivia" customModuleProvider="target">
+                                <rect key="frame" x="20" y="545" width="335" height="75"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-9T-Kd5">
+                                        <rect key="frame" x="20" y="20" width="295" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox3-LA-tff" userLabel="Homeworld">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="2le-0z-vFU"/>
+                                                    <constraint firstAttribute="width" constant="35" id="KZs-4j-FfJ"/>
+                                                </constraints>
+                                                <state key="normal" image="homeworld_icon"/>
+                                                <connections>
+                                                    <action selector="homeWorldClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05N-TN-BdO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqB-Jv-x4R" userLabel="Vehicles">
+                                                <rect key="frame" x="86.666666666666671" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="ATB-yk-UMk"/>
+                                                    <constraint firstAttribute="height" constant="35" id="RXl-cn-MnB"/>
+                                                </constraints>
+                                                <state key="normal" image="vehicles"/>
+                                                <connections>
+                                                    <action selector="vehiclesClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lZI-BG-swy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAY-Wb-Wbu" userLabel="Starships">
+                                                <rect key="frame" x="173.33333333333334" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="m9Y-F1-V8N"/>
+                                                    <constraint firstAttribute="width" constant="35" id="vkM-cw-8oJ"/>
+                                                </constraints>
+                                                <state key="normal" image="starships"/>
+                                                <connections>
+                                                    <action selector="starshipsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XvW-gk-v3m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laC-cl-And" userLabel="Films">
+                                                <rect key="frame" x="260" y="0.0" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="9Bx-wE-OXz"/>
+                                                    <constraint firstAttribute="width" constant="35" id="yzv-oj-bzH"/>
+                                                </constraints>
+                                                <state key="normal" image="films"/>
+                                                <connections>
+                                                    <action selector="filmsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIa-eF-dyA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xKz-9T-Kd5" secondAttribute="trailing" constant="20" id="9VU-KO-hyO"/>
+                                    <constraint firstItem="xKz-9T-Kd5" firstAttribute="leading" secondItem="1Qr-BR-Ej5" secondAttribute="leading" constant="20" id="FVK-XE-qR8"/>
+                                    <constraint firstAttribute="height" constant="75" id="fRx-L4-zTR"/>
+                                    <constraint firstItem="xKz-9T-Kd5" firstAttribute="centerY" secondItem="1Qr-BR-Ej5" secondAttribute="centerY" id="s7z-0J-g5o"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="H8M-EJ-RRt" secondAttribute="bottom" id="3Oh-OX-uta"/>
+                            <constraint firstItem="1Qr-BR-Ej5" firstAttribute="width" secondItem="Q8h-la-mZt" secondAttribute="width" id="6Ex-nc-QtD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ki-2L-56U" secondAttribute="bottom" constant="20" id="7Zl-i0-s5B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HTF-XW-Dw1" secondAttribute="trailing" constant="20" id="Aml-oN-F2d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H8M-EJ-RRt" secondAttribute="trailing" id="Dfg-rR-RDE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q8h-la-mZt" secondAttribute="trailing" constant="20" id="G83-LL-dIR"/>
+                            <constraint firstItem="1Qr-BR-Ej5" firstAttribute="top" secondItem="Q8h-la-mZt" secondAttribute="bottom" constant="14" id="Gg9-p4-cpY"/>
+                            <constraint firstItem="1Qr-BR-Ej5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IeJ-bm-OZG"/>
                             <constraint firstItem="Q8h-la-mZt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kds-8J-llJ"/>
                             <constraint firstItem="HTF-XW-Dw1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O6u-Ya-Ja7"/>
                             <constraint firstItem="HTF-XW-Dw1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XU7-wM-1jT"/>
@@ -239,6 +303,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="films" width="50" height="50"/>
+        <image name="homeworld_icon" width="50" height="50"/>
         <image name="space1" width="699" height="1120"/>
+        <image name="starships" width="50" height="50"/>
+        <image name="vehicles" width="50" height="50"/>
     </resources>
 </document>
