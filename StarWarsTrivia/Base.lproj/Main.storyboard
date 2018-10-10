@@ -200,7 +200,6 @@
                                                 </constraints>
                                                 <state key="normal" image="homeworld_icon"/>
                                                 <connections>
-                                                    <action selector="homeWorldClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05N-TN-BdO"/>
                                                     <segue destination="31Y-rM-qWK" kind="show" identifier="toHomeworld" id="Kgm-nJ-SpI"/>
                                                 </connections>
                                             </button>
@@ -212,7 +211,6 @@
                                                 </constraints>
                                                 <state key="normal" image="vehicles"/>
                                                 <connections>
-                                                    <action selector="vehiclesClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lZI-BG-swy"/>
                                                     <segue destination="KpK-Ft-RWj" kind="show" identifier="toVehicles" id="vjW-P2-LrY"/>
                                                 </connections>
                                             </button>
@@ -224,7 +222,6 @@
                                                 </constraints>
                                                 <state key="normal" image="starships"/>
                                                 <connections>
-                                                    <action selector="starshipsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XvW-gk-v3m"/>
                                                     <segue destination="Vpk-cr-eNp" kind="show" identifier="toStarships" id="paE-Mz-k5S"/>
                                                 </connections>
                                             </button>
@@ -236,7 +233,6 @@
                                                 </constraints>
                                                 <state key="normal" image="films"/>
                                                 <connections>
-                                                    <action selector="filmsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIa-eF-dyA"/>
                                                     <segue destination="liR-lZ-fHO" kind="show" identifier="toFilms" id="hYY-q5-sCM"/>
                                                 </connections>
                                             </button>
@@ -275,15 +271,15 @@
                     <navigationItem key="navigationItem" id="eMQ-zu-px7"/>
                     <connections>
                         <outlet property="birthYearLbl" destination="Eiu-oa-TOV" id="Bud-Ws-cQl"/>
-                        <outlet property="filmsBtn" destination="laC-cl-And" id="pXm-GN-2Qb"/>
+                        <outlet property="filmsBtn" destination="laC-cl-And" id="tx4-eF-Eq2"/>
                         <outlet property="genderLbl" destination="6V9-4s-DDj" id="jZI-yA-Tv0"/>
                         <outlet property="hairLbl" destination="i7Y-V9-8RF" id="QAd-95-QdX"/>
                         <outlet property="heightLbl" destination="SvL-FH-9LR" id="f09-yX-EFj"/>
-                        <outlet property="homeWorldBtn" destination="ox3-LA-tff" id="GT6-3h-XQx"/>
+                        <outlet property="homeWorldBtn" destination="ox3-LA-tff" id="gze-my-znc"/>
                         <outlet property="massLbl" destination="Erx-4k-tUU" id="TlX-cz-3Zm"/>
                         <outlet property="nameLbl" destination="qCz-qa-4Bh" id="E86-U0-X6N"/>
-                        <outlet property="starshipsBtn" destination="VAY-Wb-Wbu" id="d9B-F1-hxW"/>
-                        <outlet property="vehiclesBtn" destination="TqB-Jv-x4R" id="eNg-8G-vES"/>
+                        <outlet property="starshipsBtn" destination="VAY-Wb-Wbu" id="R94-B5-QsY"/>
+                        <outlet property="vehiclesBtn" destination="TqB-Jv-x4R" id="7SM-rw-0Am"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

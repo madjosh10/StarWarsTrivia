@@ -24,6 +24,7 @@ class SelectPersonVC: UIViewController {
     @IBOutlet weak var homeWorldBtn: UIButton!
     
     var personAPI = PersonAPI()
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class SelectPersonVC: UIViewController {
         personAPI.getRandomPersonAlamo(id: random) { (person) in
             if let person = person {
                 self.setUpView(person: person)
+                self.person = person
             }
         }
         
@@ -57,17 +59,39 @@ class SelectPersonVC: UIViewController {
     }
     
     
-    @IBAction func homeWorldClicked(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        switch segue.identifier {
+        case Segue.homeworld.rawValue:
+            if let destination = segue.destination as? HomeworldVC {
+                destination.person = person
+            }
+        case Segue.vehicles.rawValue:
+            if let destination = segue.destination as? VehiclesVC {
+                destination.person = person
+            }
+        case Segue.starships.rawValue:
+            if let destination = segue.destination as? StarshipsVC {
+                destination.person = person
+            }
+        case Segue.films.rawValue:
+            if let destination = segue.destination as? FilmsVC {
+                destination.person = person
+            }
+        default:
+            break
+        }
+        
+    
+    } // end prepare func
+    
+    enum Segue : String {
+        case homeworld = "toHomeworld"
+        case vehicles = "toVehicles"
+        case starships = "toStarships"
+        case films = "toFilms"
     }
     
-    @IBAction func vehiclesClicked(_ sender: Any) {
-    }
     
-    @IBAction func starshipsClicked(_ sender: Any) {
-    }
     
-    @IBAction func filmsClicked(_ sender: Any) {
-    }
-}
-
+}// end SelectPersonVC
