@@ -61,37 +61,45 @@ class SelectPersonVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        switch segue.identifier {
-        case Segue.homeworld.rawValue:
-            if let destination = segue.destination as? HomeworldVC {
-                destination.person = person
-            }
-        case Segue.vehicles.rawValue:
-            if let destination = segue.destination as? VehiclesVC {
-                destination.person = person
-            }
-        case Segue.starships.rawValue:
-            if let destination = segue.destination as? StarshipsVC {
-                destination.person = person
-            }
-        case Segue.films.rawValue:
-            if let destination = segue.destination as? FilmsVC {
-                destination.person = person
-            }
-        default:
-            break
+        if var destination = segue.destination as? PersonProtocol {
+            destination.person = person
         }
         
+//        switch segue.identifier {
+//        case Segue.homeworld.rawValue:
+//            if let destination = segue.destination as? HomeworldVC {
+//                destination.person = person
+//            }
+//        case Segue.vehicles.rawValue:
+//            if let destination = segue.destination as? VehiclesVC {
+//                destination.person = person
+//            }
+//        case Segue.starships.rawValue:
+//            if let destination = segue.destination as? StarshipsVC {
+//                destination.person = person
+//            }
+//        case Segue.films.rawValue:
+//            if let destination = segue.destination as? FilmsVC {
+//                destination.person = person
+//            }
+//        default:
+//            break
+//        }
+//
     
-    } // end prepare func
+    }      // end prepare func
     
-    enum Segue : String {
-        case homeworld = "toHomeworld"
-        case vehicles = "toVehicles"
-        case starships = "toStarships"
-        case films = "toFilms"
-    }
+//    enum Segue : String {
+//        case homeworld = "toHomeworld"
+//        case vehicles = "toVehicles"
+//        case starships = "toStarships"
+//        case films = "toFilms"
+//    }
     
     
     
-}// end SelectPersonVC
+}    // end SelectPersonVC
+
+protocol PersonProtocol {
+    var person: Person! { get set }
+}
