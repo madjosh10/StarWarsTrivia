@@ -13,6 +13,7 @@ class VehiclesVC: UIViewController, PersonProtocol {
     var person: Person!
     let api = VehicleAPI()
     var vehicles = [String]()
+    var currentVehicle = 0
 
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var modelLbl: UILabel!
@@ -29,11 +30,13 @@ class VehiclesVC: UIViewController, PersonProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(person.name)
+
         vehicles = person.vehicleUrls
+        nextBtn.isEnabled = vehicles.count > 1
+        previousBtn.isEnabled = false
         guard let firstVehicle = vehicles.first else { return }
         getVehicle(url: firstVehicle)
-        // Do any additional setup after loading the view.
+        
     }
     
     func getVehicle(url: String) {
@@ -58,9 +61,39 @@ class VehiclesVC: UIViewController, PersonProtocol {
     
     
     @IBAction func previousClicked(_ sender: Any) {
+        currentVehicle -= 1
+        setButtonState()
     }
     
     @IBAction func nextClicked(_ sender: Any) {
+        currentVehicle += 1
+        setButtonState()
+    }
+    
+    func setButtonState() {
+        
+        nextBtn.isEnabled = currentVehicle == vehicles.count - 1 ? false : true
+        previousBtn.isEnabled = currentVehicle == 0 ? false : true
+        
+//        if currentVehicle == 0 {
+//            previousBtn.isEnabled = false
+//
+//        } else {
+//            previousBtn.isEnabled = true
+//
+//        }
+//
+//        if currentVehicle == vehicles.count - 1 {
+//            nextBtn.isEnabled = false
+//
+//        } else {
+//            nextBtn.isEnabled = true
+//
+//        }
+        
+        getVehicle(url: vehicles[currentVehicle])
+        
+        
     }
     
     
