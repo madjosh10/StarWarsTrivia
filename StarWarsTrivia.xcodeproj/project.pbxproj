@@ -18,6 +18,8 @@
 		429BE321217027DF00CD9F40 /* VehicleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BE320217027DF00CD9F40 /* VehicleAPI.swift */; };
 		429BE323217143D600CD9F40 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BE322217143D600CD9F40 /* Starship.swift */; };
 		429BE3252171466600CD9F40 /* StarshipAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BE3242171466600CD9F40 /* StarshipAPI.swift */; };
+		429BE3272171564800CD9F40 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BE3262171564800CD9F40 /* Film.swift */; };
+		429BE3292171577D00CD9F40 /* FilmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429BE3282171577D00CD9F40 /* FilmAPI.swift */; };
 		555AF5B9215BE8EC003B4D11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5B8215BE8EC003B4D11 /* AppDelegate.swift */; };
 		555AF5BB215BE8EC003B4D11 /* SelectPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555AF5BA215BE8EC003B4D11 /* SelectPersonVC.swift */; };
 		555AF5BE215BE8EC003B4D11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555AF5BC215BE8EC003B4D11 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		429BE320217027DF00CD9F40 /* VehicleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAPI.swift; sourceTree = "<group>"; };
 		429BE322217143D600CD9F40 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		429BE3242171466600CD9F40 /* StarshipAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipAPI.swift; sourceTree = "<group>"; };
+		429BE3262171564800CD9F40 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		429BE3282171577D00CD9F40 /* FilmAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmAPI.swift; sourceTree = "<group>"; };
 		555AF5B5215BE8EC003B4D11 /* StarWarsTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555AF5B8215BE8EC003B4D11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555AF5BA215BE8EC003B4D11 /* SelectPersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPersonVC.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				429BE31621700FB000CD9F40 /* Homeworld.swift */,
 				429BE31E2170260300CD9F40 /* Vehicle.swift */,
 				429BE322217143D600CD9F40 /* Starship.swift */,
+				429BE3262171564800CD9F40 /* Film.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				429BE3182170100500CD9F40 /* HomeworldAPI.swift */,
 				429BE320217027DF00CD9F40 /* VehicleAPI.swift */,
 				429BE3242171466600CD9F40 /* StarshipAPI.swift */,
+				429BE3282171577D00CD9F40 /* FilmAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				5576A2DB216C0DD8009DF3AE /* FadeEnabledButton.swift in Sources */,
 				429BE3252171466600CD9F40 /* StarshipAPI.swift in Sources */,
 				429BE31F2170260300CD9F40 /* Vehicle.swift in Sources */,
+				429BE3272171564800CD9F40 /* Film.swift in Sources */,
 				429BE313216DE20400CD9F40 /* StarshipsVC.swift in Sources */,
 				429BE31721700FB000CD9F40 /* Homeworld.swift in Sources */,
 				429BE311216DE1ED00CD9F40 /* VehiclesVC.swift in Sources */,
@@ -330,6 +337,7 @@
 				555AF5D6215BF01E003B4D11 /* BlackBgView.swift in Sources */,
 				555AF5DE215EA319003B4D11 /* PersonAPI.swift in Sources */,
 				429BE315216DE21500CD9F40 /* FilmsVC.swift in Sources */,
+				429BE3292171577D00CD9F40 /* FilmAPI.swift in Sources */,
 				429BE30F216DE1D900CD9F40 /* HomeworldVC.swift in Sources */,
 				555AF5D9215BF096003B4D11 /* Constants.swift in Sources */,
 			);
