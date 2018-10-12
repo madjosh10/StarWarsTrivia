@@ -1,5 +1,5 @@
 //
-//  HomeworldAPI.swift
+//  VehicleAPI.swift
 //  StarWarsTrivia
 //
 //  Created by Joshua Madrigal on 10/11/18.
@@ -8,10 +8,9 @@
 
 import Foundation
 import Alamofire
-
-class HomeworldAPI {
+class VehicleAPI {
     
-    func getHomeWorld(url: String, completion: @escaping HomeworldResponseCompletion) {
+    func getVehicle(url: String, completion: @escaping VehicleResponseCompletion) {
         guard let url = URL(string: url) else { return }
         Alamofire.request(url).responseJSON { (response) in
             if let error = response.result.error {
@@ -23,8 +22,8 @@ class HomeworldAPI {
             guard let data = response.data else { return completion(nil)}
             let jsonDecoder = JSONDecoder()
             do {
-                let homeworld = try jsonDecoder.decode(Homeworld.self, from: data)
-                completion(homeworld)
+                let vehicle = try jsonDecoder.decode(Vehicle.self, from: data)
+                completion(vehicle)
                 
             } catch {
                 debugPrint(error.localizedDescription)
@@ -34,6 +33,5 @@ class HomeworldAPI {
         }
         
         
-    } // end getHomeWorld func
-    
-} // end HomeworldAPI class
+    }
+}
